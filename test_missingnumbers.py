@@ -1,0 +1,16 @@
+import unittest
+from day.missingnumber import missing_number_list
+
+
+class daymissingnumbersTest(unittest.TestCase):
+
+    def test_emptyList(self):
+        self.assertEqual(missing_number_list( [1, 2, 3, 5, 6, 7, 9]), [4, 8])
+        self.assertEqual(len(missing_number_list([1, 2, 3, 5, 6, 7, 9])), 2)
+
+    def test_input_is_list(self):
+        self.assertEqual(missing_number_list((1, 3, 4)), 'only lists are allowed')
+
+
+if __name__ == '__main__':
+    unittest.main()
